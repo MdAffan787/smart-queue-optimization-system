@@ -9,7 +9,7 @@ const userSchema=mongoose.Schema({
         default:"user"
     },
 })
-    const userModel=mongoose.Model("user",userSchema);
+    const userModel=mongoose.model("user",userSchema);
     module.exports=userModel;
     
 

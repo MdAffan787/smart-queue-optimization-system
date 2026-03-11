@@ -8,7 +8,7 @@ const tokenSchema=mongoose.Schema({
     },
     status:{
         type:String,
-        enum:["waiting","serving","done"],
+        enum:["waiting","serving","done","cancelled", "skipped"],
         default:"waiting"
     },
     createdAt:{
@@ -17,6 +17,6 @@ const tokenSchema=mongoose.Schema({
     },
      estimatedWaitTime:Number,
 },{timestamps:true})
-    const tokenModel=mongoose.Model("counter",tokenSchema);
+    const tokenModel=mongoose.model("counter",tokenSchema);
     module.exports=tokenModel;
     
